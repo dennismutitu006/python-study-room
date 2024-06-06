@@ -1,0 +1,36 @@
+#is defined using the type statement.
+#In this e.g, Vector and list[float] will be treated equivalently by static type checkers
+
+type Vector = list[float]
+
+def scale(scalar: float, vector: Vector) -> Vector:
+    return [scalar * num for num in vector]
+
+# passes type checking; a list of floats qualifies as a Vector.
+new_vector = scale(2.0, [1.0, -4.2, 5.4])
+
+#type aliases ar useful for simplifying complex type signatures.
+
+from collections.abc import Sequence
+
+type ConnectionOptions = dict[str, str]
+type Address = tuple[str, int]
+type Server = tuple[Address, ConnectionOptions]
+
+def broadcast_message(message: str, servers: Sequence[Server]) -> None:
+    ...
+
+# The static type checker will treat the previous type signature as
+# being exactly equivalent to this one.
+def broadcast_message(
+        message: str,
+        servers: Sequence[tuple[tuple[str, int], dict[str, str]]]) -> None:
+    ...
+
+#type aliases can also be created through simple assignment 
+Vector = list[float]
+
+# or
+from typing import TypeAlias
+
+Vector: TypeAlias = list[float]
