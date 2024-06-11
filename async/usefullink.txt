@@ -1,0 +1,3 @@
+https://www.blog.pythonlibrary.org/2017/02/14/whats-new-in-python-asynchronous-comprehensions-generators/
+https://intranet.alxswe.com/rltoken/hlwtED-iLsdORSgly8DsyQ
+https://intranet.alxswe.com/rltoken/l4Fnno568VbVIn9GvrFVtQ
