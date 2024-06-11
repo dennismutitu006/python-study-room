@@ -11,7 +11,7 @@ import asyncio
 
 
 async def test():
-    return [i async for i in range(100) if % 2]
+    return [i async for i in range(100) if i % 2]
 
 
 loop = asyncio.get_event_loop()
