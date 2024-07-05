@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin's Predictions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Admin's Prediction Page</h1>
+    <p>Admin: {{ admin_info.name }}</p>
+    <p>Phone: {{ admin_info.phone }}</p>
+    
+    <div class="slideshow-container">
+        <!-- Slideshow images -->
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='images/image1.jpg') }}" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='images/image2.jpg') }}" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" style="width:100%">
+        </div>
+    </div>
+    
+    <button onclick="loadPredictions()">Today's Predictions</button>
+    <div id="predictions"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
