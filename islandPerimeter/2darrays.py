@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #Python program to demonstrate working of method1 and method2
 rows, cols = (5, 5)
 #method 2 1st approach
